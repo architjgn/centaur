@@ -13,10 +13,9 @@ InputParameters validParams<CentaurApp>()
   return params;
 }
 
-CentaurApp::CentaurApp(const std::string & name, InputParameters parameters) :
-    MooseApp(name, parameters)
+CentaurApp::CentaurApp(InputParameters parameters) :
+    MooseApp(parameters)
 {
-  srand(processor_id());
 
   Moose::registerObjects(_factory);
   ModulesApp::registerObjects(_factory);
