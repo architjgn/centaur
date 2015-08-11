@@ -11,7 +11,7 @@ InputParameters validParams<CentaurApp>();
 class CentaurApp : public MooseApp
 {
 public:
-  CentaurApp(const std::string & name, InputParameters parameters);
+  CentaurApp(InputParameters parameters);
   virtual ~CentaurApp();
 
   static void registerApps();
